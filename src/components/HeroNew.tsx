@@ -53,7 +53,12 @@ export default function HeroNew() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center">
-          <button className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-slate-900 text-white rounded-lg font-semibold text-base hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+          <button
+            onClick={() => {
+              document.getElementById('our-work')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-slate-900 text-white rounded-lg font-semibold text-base hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+          >
             View Our Work
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>

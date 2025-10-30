@@ -35,12 +35,15 @@ export default function OurBrands() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="our-work" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Part of the ARTComp Ecosystem
           </h2>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Our work is behind these projects. We build the automations, not just websites.
+          </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
