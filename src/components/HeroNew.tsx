@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import { ArrowRight, Brain, Cpu, Network, Sparkles, Zap } from 'lucide-react';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function HeroNew() {
+  const [showSubtext, setShowSubtext] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50 opacity-60"></div>
@@ -28,11 +32,23 @@ export default function HeroNew() {
           ARTCOMP
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-slate-700 font-medium mb-4 sm:mb-6">
-          AI Development & Intelligent Automation
+        <p className="text-lg sm:text-xl md:text-2xl text-slate-700 font-medium mb-4 sm:mb-6 min-h-[2em]">
+          <TypeAnimation
+            sequence={[
+              'AI Development & Intelligent Automation',
+              () => setShowSubtext(true),
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={false}
+          />
         </p>
 
-        <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
+        <p
+          className={`text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed transition-opacity duration-1000 ${
+            showSubtext ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
           We build AI agents, websites, and call assistants that simplify business operations.
         </p>
 
