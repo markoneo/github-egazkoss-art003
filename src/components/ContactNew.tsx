@@ -11,7 +11,7 @@ export default function ContactNew() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const recipientEmail = 'hello@artcomp.com';
+    const recipientEmail = 'info@artcomp.net';
     const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
