@@ -7,17 +7,17 @@ export default function ContactNew() {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('sending');
 
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus('idle'), 3000);
-    }, 1000);
+    const recipientEmail = 'hello@artcomp.com';
+    const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (
@@ -83,26 +83,17 @@ export default function ContactNew() {
               onChange={handleChange}
               required
               rows={6}
-              className="w-full px-6 py-4 rounded-xl bg-white/10 border-2 border-slate-600 text-white placeholder-slate-400 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/50 transition-all resize-none"
+              className="w-full px-5 py-3 rounded-lg bg-white/10 border border-slate-600 text-white placeholder-slate-400 focus:border-white focus:outline-none transition-all resize-none"
               placeholder="Tell us about your project..."
             />
           </div>
 
           <button
             type="submit"
-            disabled={status === 'sending'}
-            className="w-full px-8 py-4 bg-white text-slate-900 rounded-lg font-semibold text-base hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-8 py-4 bg-white text-slate-900 rounded-lg font-semibold text-base hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2"
           >
-            {status === 'sending' ? (
-              'Sending...'
-            ) : status === 'success' ? (
-              'Message Sent!'
-            ) : (
-              <>
-                Send Message
-                <Send className="w-5 h-5" />
-              </>
-            )}
+            Send Message
+            <Send className="w-5 h-5" />
           </button>
         </form>
       </div>
