@@ -1,9 +1,27 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Network, Sparkles, Zap } from 'lucide-react';
 
 export default function HeroNew() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50 opacity-60"></div>
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 animate-float-slow">
+          <Brain className="w-16 h-16 text-slate-300 opacity-40" />
+        </div>
+        <div className="absolute top-40 right-20 animate-float-slower">
+          <Cpu className="w-12 h-12 text-blue-300 opacity-30" />
+        </div>
+        <div className="absolute bottom-32 left-1/4 animate-float">
+          <Network className="w-14 h-14 text-slate-300 opacity-40" />
+        </div>
+        <div className="absolute top-1/3 right-10 animate-float-slow">
+          <Sparkles className="w-10 h-10 text-blue-300 opacity-30" />
+        </div>
+        <div className="absolute bottom-40 right-1/4 animate-float-slower">
+          <Zap className="w-12 h-12 text-slate-300 opacity-40" />
+        </div>
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-center">
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 mb-8 tracking-tight">
