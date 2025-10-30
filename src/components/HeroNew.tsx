@@ -63,7 +63,12 @@ export default function HeroNew() {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
 
-          <button className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-lg font-semibold text-base hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
+          <button
+            onClick={() => {
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-white border-2 border-slate-900 text-slate-900 rounded-lg font-semibold text-base hover:bg-slate-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
             Build With Us
           </button>
         </div>
