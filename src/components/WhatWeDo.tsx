@@ -20,30 +20,29 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-slate-900 mb-4">What We Do</h2>
-          <div className="w-24 h-1 bg-indigo-600 mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">What We Do</h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="group text-center p-8 rounded-2xl hover:bg-slate-50 transition-all duration-300 hover:shadow-xl"
+                className="group text-center p-10 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-indigo-100 text-indigo-600 mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
-                  <Icon className="w-10 h-10" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-slate-100 text-slate-700 mb-6 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                  <Icon className="w-8 h-8" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   {service.title}
                 </h3>
 
-                <p className="text-lg text-slate-600 leading-relaxed">
+                <p className="text-base text-slate-600 leading-relaxed">
                   {service.description}
                 </p>
               </div>

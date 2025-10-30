@@ -30,12 +30,11 @@ export default function ContactNew() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-900">
+    <section className="py-20 bg-slate-900">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-white mb-4">Let's Build Together</h2>
-          <div className="w-24 h-1 bg-indigo-400 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-300 leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Build Together</h2>
+          <p className="text-lg text-slate-300 leading-relaxed">
             Tell us about your idea. We'll help you turn it into an intelligent product.
           </p>
         </div>
@@ -52,7 +51,7 @@ export default function ContactNew() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 rounded-xl bg-white/10 border-2 border-slate-600 text-white placeholder-slate-400 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/50 transition-all"
+              className="w-full px-5 py-3 rounded-lg bg-white/10 border border-slate-600 text-white placeholder-slate-400 focus:border-white focus:outline-none transition-all"
               placeholder="Your name"
             />
           </div>
@@ -68,7 +67,7 @@ export default function ContactNew() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-6 py-4 rounded-xl bg-white/10 border-2 border-slate-600 text-white placeholder-slate-400 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/50 transition-all"
+              className="w-full px-5 py-3 rounded-lg bg-white/10 border border-slate-600 text-white placeholder-slate-400 focus:border-white focus:outline-none transition-all"
               placeholder="your@email.com"
             />
           </div>
@@ -92,7 +91,7 @@ export default function ContactNew() {
           <button
             type="submit"
             disabled={status === 'sending'}
-            className="w-full px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-2xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-8 py-4 bg-white text-slate-900 rounded-lg font-semibold text-base hover:bg-slate-100 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === 'sending' ? (
               'Sending...'
