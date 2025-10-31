@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
-import Plasma from './Plasma';
 
 export default function ContactNew() {
   const [formData, setFormData] = useState({
@@ -31,18 +30,8 @@ export default function ContactNew() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black relative">
-      <div style={{ width: '100%', height: '600px', position: 'absolute', top: 0, left: 0 }}>
-        <Plasma
-          color="#ff6b35"
-          speed={0.6}
-          direction="forward"
-          scale={1.1}
-          opacity={0.8}
-          mouseInteractive={true}
-        />
-      </div>
-      <div className="max-w-3xl mx-auto px-6 relative z-10">
+    <section id="contact" className="py-20 bg-black">
+      <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Build Together</h2>
           <p className="text-lg text-slate-300 leading-relaxed">
