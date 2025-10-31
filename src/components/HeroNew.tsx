@@ -35,13 +35,6 @@ export default function HeroNew() {
           />
         </p>
 
-        <p
-          className={`text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed transition-opacity duration-1000 drop-shadow-lg ${
-            showSubtext ? 'opacity-100' : 'opacity-0'
-          }`}
-        >
-          We build AI agents, websites, and call assistants that simplify business operations.
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center">
           <button
