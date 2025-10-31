@@ -19,7 +19,7 @@ export default function HeroNew() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
-        <div className="bg-black/40 backdrop-blur-sm rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-white/10">
+        <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-white/10">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
             ARTCOMP
           </h1>
