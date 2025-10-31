@@ -1,7 +1,6 @@
 import HeroNew from './components/HeroNew';
 import WhatWeDo from './components/WhatWeDo';
 import OurBrands from './components/OurBrands';
-import Showcase from './components/Showcase';
 import About from './components/About';
 import ContactNew from './components/ContactNew';
 import Footer from './components/Footer';
@@ -12,7 +11,6 @@ function App() {
       <HeroNew />
       <WhatWeDo />
       <OurBrands />
-      <Showcase />
       <About />
       <ContactNew />
       <Footer />

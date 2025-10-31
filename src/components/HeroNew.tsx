@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 import LetterGlitch from './LetterGlitch';
 
@@ -37,16 +36,6 @@ export default function HeroNew() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center">
-          <button
-            onClick={() => {
-              document.getElementById('our-work')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="group w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-4 bg-white text-slate-900 rounded-lg font-semibold text-base hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-          >
-            View Our Work
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-
           <button
             onClick={() => {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
