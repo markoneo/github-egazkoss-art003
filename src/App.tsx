@@ -4,10 +4,12 @@ import OurBrands from './components/OurBrands';
 import About from './components/About';
 import ContactNew from './components/ContactNew';
 import Footer from './components/Footer';
+import SplashCursor from './components/SplashCursor';
 
 function App() {
   return (
     <div className="min-h-screen">
+      <SplashCursor />
       <HeroNew />
       <WhatWeDo />
       <OurBrands />
