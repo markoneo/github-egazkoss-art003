@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import LetterGlitch from './LetterGlitch';
+import ScrambledText from './ScrambledText';
 
 export default function HeroNew() {
   const [showSubtext, setShowSubtext] = useState(false);
@@ -20,7 +21,15 @@ export default function HeroNew() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
         <div className="bg-black/20 backdrop-blur-sm rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-white/10">
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
-            ARTCOMP
+            <ScrambledText
+              className="inline-block"
+              radius={100}
+              duration={1.5}
+              speed={0.6}
+              scrambleChars=".:#@*"
+            >
+              ARTCOMP
+            </ScrambledText>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white font-medium mb-8 sm:mb-12 min-h-[2em] drop-shadow-lg">
