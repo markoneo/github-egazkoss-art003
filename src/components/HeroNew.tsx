@@ -19,24 +19,24 @@ export default function HeroNew() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
-          ARTCOMP
-        </h1>
+        <div className="bg-black/60 backdrop-blur-sm rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-white/10">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
+            ARTCOMP
+          </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-white font-medium mb-4 sm:mb-6 min-h-[2em] drop-shadow-lg">
-          <TypeAnimation
-            sequence={[
-              'AI Development & Intelligent Automation',
-              () => setShowSubtext(true),
-            ]}
-            wrapper="span"
-            speed={50}
-            cursor={false}
-          />
-        </p>
+          <p className="text-lg sm:text-xl md:text-2xl text-white font-medium mb-8 sm:mb-12 min-h-[2em] drop-shadow-lg">
+            <TypeAnimation
+              sequence={[
+                'AI Development & Intelligent Automation',
+                () => setShowSubtext(true),
+              ]}
+              wrapper="span"
+              speed={50}
+              cursor={false}
+            />
+          </p>
 
-
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center">
           <button
             onClick={() => {
               document.getElementById('our-work')?.scrollIntoView({ behavior: 'smooth' });
@@ -55,6 +55,7 @@ export default function HeroNew() {
           >
             Build With Us
           </button>
+          </div>
         </div>
       </div>
     </section>
