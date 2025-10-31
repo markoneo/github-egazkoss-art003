@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 import Threads from './Threads';
-import StarBorder from './StarBorder';
 
 export default function ContactNew() {
   const [formData, setFormData] = useState({
@@ -86,18 +85,16 @@ export default function ContactNew() {
             <label htmlFor="message" className="block text-slate-200 font-medium mb-2">
               Message
             </label>
-            <StarBorder as="div" color="white" speed="6s" thickness={1} className="w-full rounded-lg">
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-5 py-3 rounded-lg bg-white/10 border border-slate-600 text-white placeholder-slate-400 focus:border-white focus:outline-none transition-all resize-none"
-                placeholder="Tell us about your project..."
-              />
-            </StarBorder>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={6}
+              className="w-full px-5 py-3 rounded-lg bg-white/10 border border-slate-600 text-white placeholder-slate-400 focus:border-white focus:outline-none transition-all resize-none"
+              placeholder="Tell us about your project..."
+            />
           </div>
 
           <button
