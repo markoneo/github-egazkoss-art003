@@ -1,4 +1,5 @@
 import { Bot, Globe, Phone } from 'lucide-react';
+import GlitchText from './GlitchText';
 
 export default function WhatWeDo() {
   const services = [
@@ -23,7 +24,11 @@ export default function WhatWeDo() {
     <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">What We Do</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <GlitchText enableOnHover={true} speed={1}>
+              What We Do
+            </GlitchText>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10">
