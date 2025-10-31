@@ -3,7 +3,7 @@ import { HeroFeatures } from './hero/HeroFeatures';
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen bg-cream-50">
+    <div className="relative min-h-screen bg-gray-900">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video

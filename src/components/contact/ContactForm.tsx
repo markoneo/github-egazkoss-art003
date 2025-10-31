@@ -41,12 +41,12 @@ export function ContactForm() {
   };
 
   return (
-    <form 
-      name="contact" 
-      method="POST" 
+    <form
+      name="contact"
+      method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
-      className="space-y-6 bg-cream-100 p-6 rounded-lg border border-cream-200"
+      className="space-y-6 bg-white p-8 rounded-lg border border-gray-200"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
@@ -78,9 +78,9 @@ export function ContactForm() {
         required
       />
       
-      <Button 
-        type="submit" 
-        className="w-full bg-cream-400 hover:bg-cream-300 text-gray-900"
+      <Button
+        type="submit"
+        className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300"
         disabled={isSubmitting}
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}

@@ -5,7 +5,7 @@ import { servicesData } from '../data/services';
 
 export default function Services() {
   return (
-    <Section id="services" title="Our Services" className="bg-white">
+    <Section id="services" title="Our Services" className="bg-gray-50">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {servicesData.map((service, index) => (
           <IconBox

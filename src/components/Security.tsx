@@ -5,7 +5,7 @@ import { securityFeatures } from '../data/security';
 
 export default function Security() {
   return (
-    <Section id="security" title="Security First Approach" className="bg-white">
+    <Section id="security" title="Security First Approach" className="bg-gray-50">
       <div className="grid md:grid-cols-3 gap-8">
         {securityFeatures.map((feature, index) => (
           <SecurityCard
