@@ -1,20 +1,22 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
+import LetterGlitch from './LetterGlitch';
 
 export default function HeroNew() {
   const [showSubtext, setShowSubtext] = useState(false);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/marilena_78064_silhouette_of_a_human_figure_standing_under_a_ca_0e58dc36-6f33-42bf-bc4b-8ab27cf416ea.png')`,
-        }}
-      ></div>
-
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0">
+        <LetterGlitch
+          glitchColors={['#2b4539', '#61dca3', '#61b3dc']}
+          glitchSpeed={50}
+          smooth={true}
+          outerVignette={true}
+          centerVignette={false}
+        />
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
