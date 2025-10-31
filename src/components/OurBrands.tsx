@@ -54,13 +54,13 @@ export default function OurBrands() {
   });
 
   return (
-    <section id="our-work" className="py-20 bg-black">
+    <section id="our-work" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Part of the ARTComp Ecosystem
           </h2>
-          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Our work is behind these projects. We build the automations, not just websites.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function OurBrands() {
           gap={32}
           pauseOnHover={true}
           fadeOut={true}
-          fadeOutColor="#000000"
+          fadeOutColor="#ffffff"
           scaleOnHover={true}
           ariaLabel="ARTComp Ecosystem Brands"
         />
