@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
+import Threads from './Threads';
 
 export default function ContactNew() {
   const [formData, setFormData] = useState({
@@ -30,8 +31,16 @@ export default function ContactNew() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="contact" className="py-20 bg-black relative overflow-hidden">
+      <div style={{ width: '100%', height: '600px', position: 'absolute', top: 0, left: 0, right: 0 }}>
+        <Threads
+          amplitude={1}
+          distance={0}
+          enableMouseInteraction={true}
+        />
+      </div>
+
+      <div className="max-w-3xl mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Build Together</h2>
           <p className="text-lg text-slate-300 leading-relaxed">
