@@ -1,0 +1,128 @@
+.brandloop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.brandloop__track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.brandloop__list {
+  display: flex;
+  align-items: center;
+  gap: var(--brandloop-gap, 32px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-shrink: 0;
+}
+
+.brandloop__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandloop__link {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.brandloop--scale-hover .brandloop__link:hover {
+  transform: scale(1.05);
+}
+
+.brandloop--fade::before,
+.brandloop--fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.brandloop--fade::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--brandloop-fadeColor, #000000) 0%,
+    transparent 100%
+  );
+}
+
+.brandloop--fade::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--brandloop-fadeColor, #000000) 0%,
+    transparent 100%
+  );
+}
+
+.brandloop__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  width: 240px;
+  height: 160px;
+  transition: all 0.3s ease;
+}
+
+.brandloop__link:hover .brandloop__card {
+  border-color: #0f172a;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.brandloop__icon-wrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+.brandloop__link:hover .brandloop__icon-wrapper {
+  background: #0f172a;
+}
+
+.brandloop__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: #475569;
+  transition: color 0.3s ease;
+}
+
+.brandloop__link:hover .brandloop__icon {
+  color: white;
+}
+
+.brandloop__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.brandloop__description {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.5;
+}
