@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
-import GlitchText from './GlitchText';
 
 export default function HeroNew() {
   const [showSubtext, setShowSubtext] = useState(false);
@@ -19,9 +18,7 @@ export default function HeroNew() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 sm:mb-8 tracking-tight drop-shadow-2xl">
-          <GlitchText enableOnHover={true} speed={0.8}>
-            ARTCOMP
-          </GlitchText>
+          ARTCOMP
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-white font-medium mb-4 sm:mb-6 min-h-[2em] drop-shadow-lg">

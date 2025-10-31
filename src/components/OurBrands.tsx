@@ -1,5 +1,4 @@
 import { Car, DollarSign, Network, Ship, Users } from 'lucide-react';
-import GlitchText from './GlitchText';
 
 export default function OurBrands() {
   const brands = [
@@ -40,9 +39,7 @@ export default function OurBrands() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <GlitchText enableOnHover={true} speed={1}>
-              Part of the ARTComp Ecosystem
-            </GlitchText>
+            Part of the ARTComp Ecosystem
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Our work is behind these projects. We build the automations, not just websites.
